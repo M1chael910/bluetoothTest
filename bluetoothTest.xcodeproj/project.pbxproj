@@ -13,6 +13,7 @@
 		241F71502086BCFA0068E4D9 /* bluetoothTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 241F714E2086BCFA0068E4D9 /* bluetoothTest.xcdatamodeld */; };
 		241F71522086BCFB0068E4D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241F71512086BCFB0068E4D9 /* Assets.xcassets */; };
 		241F71552086BCFB0068E4D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241F71532086BCFB0068E4D9 /* LaunchScreen.storyboard */; };
+		248218DB208811C900E38959 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248218DA208811C900E38959 /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		241F71512086BCFB0068E4D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		241F71542086BCFB0068E4D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		241F71562086BCFB0068E4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		241F715F2086CD260068E4D9 /* bluetoothTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bluetoothTest.entitlements; sourceTree = "<group>"; };
+		248218DA208811C900E38959 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248218DB208811C900E38959 /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			children = (
 				241F71462086BCFA0068E4D9 /* bluetoothTest */,
 				241F71452086BCFA0068E4D9 /* Products */,
+				241F715C2086CD260068E4D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +61,7 @@
 		241F71462086BCFA0068E4D9 /* bluetoothTest */ = {
 			isa = PBXGroup;
 			children = (
+				241F715F2086CD260068E4D9 /* bluetoothTest.entitlements */,
 				241F71472086BCFA0068E4D9 /* AppDelegate.swift */,
 				241F71492086BCFA0068E4D9 /* ViewController.swift */,
 				241F714B2086BCFA0068E4D9 /* Main.storyboard */,
@@ -65,6 +71,14 @@
 				241F714E2086BCFA0068E4D9 /* bluetoothTest.xcdatamodeld */,
 			);
 			path = bluetoothTest;
+			sourceTree = "<group>";
+		};
+		241F715C2086CD260068E4D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				248218DA208811C900E38959 /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +113,11 @@
 				TargetAttributes = {
 					241F71432086BCFA0068E4D9 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -284,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bluetoothTest/bluetoothTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63N3REBS57;
 				INFOPLIST_FILE = bluetoothTest/Info.plist;
@@ -302,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bluetoothTest/bluetoothTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63N3REBS57;
 				INFOPLIST_FILE = bluetoothTest/Info.plist;
